@@ -13,7 +13,7 @@ const server = require('http').createServer();
 const io = socketIo(server);
 
 io.listen(5001);
-io.on('coneccion', (socket) => {
+io.on('connection', (socket) => {
   const changeStream = medicionesSchema.watch();
 
   changeStream.on('change', (change) => {
