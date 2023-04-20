@@ -12,7 +12,7 @@ const medicionesSchema= new mongoose.Schema({
 const server = require('http').createServer();
 const io = socketIo(server);
 
-io.listen(3000);
+io.listen(5000);
 io.on('coneccion', (socket) => {
   const changeStream = medicionesSchema.watch();
 
