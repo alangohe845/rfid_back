@@ -9,7 +9,7 @@ const medicionesSchema= new mongoose.Schema({
       },
 });
 
-const server = require('http').createServer();
+const server = require('https').createServer();
 const io = socketIo(server);
 
 io.listen(5001);
