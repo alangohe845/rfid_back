@@ -31,6 +31,7 @@ io.on('connection', (socket) => {
   // Emitir los cambios al cliente
   changeStream.on('change', (change) => {
     socket.emit('update', change.fullDocument);
+    console.log(change.fullDocument);
   });
 
   // Manejar la desconexión del cliente

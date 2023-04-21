@@ -34,15 +34,16 @@ router.post('/users', (req, res) => {
                 }
 
                 const options = {
-                    expiresIn: "1h",
+                    expiresIn: "24h",
                     issuer: "cultiveCare"
                 }
                 
-                 const token =  jwt.sign(payload, 'ZIRNamvEZY4BKewRhCwVJevV1KBTkJPw', options)
+                 const token =  jwt.sign(payload, '2ED46D7BEDC17ABA18343EAC71E21648B1AF50FFF732AF7E338075CD0ED1567A', options)
 
-                res.send({
-                    token,
-                });
+                res.send(
+                    {token}
+
+                );
                 
             }else{
                 error
